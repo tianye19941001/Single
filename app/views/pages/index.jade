@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+	.ty_index
+		.ty_article_list
+			h2.ty_index_h2 
+				span 小文章
+			ul
+				each item in articles
+					li
+						h3 
+							a(href="#{item.url}") #{item.title}
+						p #{item.summary}
+			a.more(href="/article") 更多----->
+		.ty_article_list
+			h2.ty_index_h2
+				span 小玩意
+			ul
+				li
+					h3 
+						a(href="/") 倒计时炸开
+					img(src="/libs/images/time_demo.png")
+					p 简洁简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+
+				li
+					h3 
+						a(href="/") 倒计时炸开
+					img(src="/libs/images/time_demo.png")
+					p 简洁简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+
+

@@ -1,0 +1,26 @@
+header
+	ul
+		li
+			a(href="/") 首页
+		li
+			a(href="/article") 文章
+		li 
+			a(href="") 小玩意
+		li
+			a(href="/about") 简介
+		li
+			a(href="/connect") 联系
+.ty_logo
+	h1 
+		img(src="/libs/images/bannar.jpg")
+		a(href="/") 小楼兰的奔跑
+.ty_tools
+	if user
+		span 欢迎 
+		span #{user.name}
+		a(href='/logout') 退出
+	else
+		a(href='/register') 注册
+		a(href='/login') 登陆
+.ty_times
+	canvas(id="canvas_time",class="canvas_time")
