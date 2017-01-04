@@ -4,8 +4,10 @@ block content
 	form.ty_admin_article(action="/admin/interesting",method="post")
 		h2 小玩意录入
 		h3 标题
-		input.ty_admin_TitArticle(type="text",name="article[title]")
+		input.ty_admin_TitArticle(type="text",name="interesting[title]")
 		h3 摘要
-		textarea.ty_admin_ConArticle(name="article[summary]")
+		textarea.ty_admin_ConArticle(name="interesting[summary]")
+		h3 小玩意iframe导入
+		input.ty_admin_TitArticle(name="interesting[url]")
 		input.ty_admin_SubArticle(type="submit",value="提交")
 	script(src="/libs/js/admin.js")
