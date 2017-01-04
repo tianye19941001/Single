@@ -24,6 +24,7 @@ module.exports = function(app) {
 	app.post('/Crawler',Cr.cr);
 
 	app.get('/interesting',Interesting.all);
+	app.get('/admin/interesting',Interesting.pageinteresting);
 
 	app.get('/register',User.pagereg);
 	app.get('/login',User.pagelogin);

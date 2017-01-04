@@ -14,5 +14,10 @@ exports.all = function(req,res){
 	// 	Article.find({}).limit(num*number).skip((num-1)*number).exec(function(err,articles){
 	// 	})
 	// });
-	res.render('article')
+	res.render('article');
+}
+exports.pageinteresting = function(req,res){
+	res.render('admin_interesting',{
+		title:'小玩意后台页面'
+	})
 }
