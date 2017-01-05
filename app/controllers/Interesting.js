@@ -1,3 +1,7 @@
+var Interesting = require('../models/interestings');
+var _ = require('underscore');
+var fs = require("fs");
+
 exports.all = function(req,res){
 	// var number = 4;
 	// var num = 1;
@@ -20,4 +24,8 @@ exports.pageinteresting = function(req,res){
 	res.render('admin_interesting',{
 		title:'小玩意后台页面'
 	})
+}
+exports.save = function(req,res){
+	var _interesting = req.body.Interesting;
+	console.log(_interesting);
 }

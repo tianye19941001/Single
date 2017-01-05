@@ -4,7 +4,7 @@ var User = require('../app/controllers/user');
 var Article = require('../app/controllers/article');
 var Message = require('../app/controllers/meg');
 var Other = require('../app/controllers/otherpages');
-var Interesting = require('../app/controllers/Interesting');
+var Interesting = require('../app/controllers/interesting');
 var Cr = require('../app/controllers/cr');
 var _ = require('underscore');
 
@@ -25,6 +25,7 @@ module.exports = function(app) {
 
 	app.get('/interesting',Interesting.all);
 	app.get('/admin/interesting',Interesting.pageinteresting);
+	app.post('/admin/interesting',Interesting.save);
 
 	app.get('/register',User.pagereg);
 	app.get('/login',User.pagelogin);
@@ -125,7 +126,7 @@ module.exports = function(app) {
 	   fs.readFile( req.files[0].path, function (err, data) {
 	        fs.writeFile(des_file, data, function (err) {
 	         if( err ){
-	              console.log( err );
+	              console.log( err ); 
 	         }else{
 	               response = {
 	                   message:'File uploaded successfully',
