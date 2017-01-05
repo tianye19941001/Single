@@ -58,8 +58,6 @@ module.exports = function(app) {
 
 
 
-
-
 	// demo
 	app.post('/reg', function (req, res) {
 	   response = {

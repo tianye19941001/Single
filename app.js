@@ -17,6 +17,7 @@ app.set('view engine', 'jade')
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname,'public')));
+app.use(bodyParser({uploadDir:'./tmp'}));
 app.use(multer({ dest: '/tmp/'}).array('image'));
 
 app.use(session({

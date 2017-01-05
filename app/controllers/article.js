@@ -12,7 +12,7 @@ exports.save = function(req,res) {
 				if (err) console.log(err);
 				res.redirect('/')
 			})
-		}else{
+		}else{ 
 			var article = new Article(_article);
 			article.save(function(err,article){
 				if (err) console.log(err);

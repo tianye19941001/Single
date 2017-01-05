@@ -4,8 +4,8 @@ var Schema = mongoose.Schema;
 var InterestingsSchema = new mongoose.Schema({
 	title:String,
 	poster:String,
-	summary:String,
 	detial:String,
+	where:String,
 	meta:{
 		creatAt:{
 			type:Date,
