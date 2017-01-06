@@ -11,7 +11,6 @@ var app = express();
 var dbUrl = 'mongodb://localhost/tianye2'
 mongoose.connect(dbUrl)
 
-
 app.set('views','./app/views/pages')
 app.set('view engine', 'jade')
 app.use(cookieParser());
