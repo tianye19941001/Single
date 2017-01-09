@@ -13,5 +13,25 @@ exports.pageinteresting = function(req,res){
 	})
 }
 exports.save = function(req,res){
-	
+	var file = req.file;
+	var _interesting = req.body.interesting;
+	_interesting.where = req.file.path;
+	var _new;
+	Article.findOne({title:_interesting.title},function(err,interesting){
+		if (err) console.log(err);
+		if (interesting) {
+			_new = _.extend(interesting, _interesting)
+			_new.save(function(err,interesting){
+				if (err) console.log(err);
+				res.redirect('/')
+			})
+		}else{ 
+			var interesting = new Article(_interesting);
+			interesting.save(function(err,interesting){
+				if (err) console.log(err);
+				res.redirect('/');
+			})
+		}
+	})
+	console.log(file);
 }

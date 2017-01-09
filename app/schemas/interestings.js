@@ -5,7 +5,7 @@ var InterestingsSchema = new mongoose.Schema({
 	title:String,
 	detial:String,
 	where:String,
-	url:String,
+	url :String,
 	meta:{
 		creatAt:{
 			type:Date,
