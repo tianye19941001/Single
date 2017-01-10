@@ -12,6 +12,7 @@ exports.pageinteresting = function(req,res){
 		title:'小玩意后台页面'
 	})
 }
+
 exports.save = function(req,res){
 	var file = req.file;
 	var _interesting = req.body.interesting;
