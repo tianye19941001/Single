@@ -39,7 +39,7 @@ exports.all = function(req,res){
 			res.render('article',{
 				articles:articles,
 				numbers:Anum,
-				now:num
+				now:parseInt(num)
 			})
 		})
 	});
