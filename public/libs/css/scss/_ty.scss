@@ -2,8 +2,8 @@
 html,body{ font-family: "微软雅黑"; min-width: 1000px; }
 body{ background: #eee; }
 %positionCenter{ position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); }
-header{ position: fixed; top: 0; left: 0; width: 100%; height:70px; background: #2A2A2A; width: 100%; min-width: 1200px; z-index: 4;
-	ul{ @extend .clearfix; margin: 0 auto; font-size: 14px; width: 80%; margin: 0 auto }
+header{ position: fixed; top: 0; left: 0; width: 100%; height:70px; background: #2A2A2A; width: 100%; z-index: 4;
+	ul{ @extend .clearfix; margin: 0 auto; font-size: 14px; width: 80%; margin: 0 auto;  }
 	li{ float: left; width:20%; height: 70px; line-height: 70px; text-align: center; transition: all .3s linear; -webkit-transition:all .3s linear;
 		&:first-child{ font-size: 16px; }
 		&:hover{ background: #E78170; 
@@ -12,7 +12,7 @@ header{ position: fixed; top: 0; left: 0; width: 100%; height:70px; background: 
 		a{ color: #999; display: block;  }
 	}
 }
-.ty_logo{ width: 100%; padding-top: 70px; height: 300px; line-height: 300px; background: #f9cc9d ; text-align: center; margin-bottom: 50px; overflow: hidden; position: relative; overflow: hidden;
+.ty_logo{ width: 100%; min-width: 1200px; padding-top: 70px; height: 300px; line-height: 300px; background: #f9cc9d ; text-align: center; margin-bottom: 50px; overflow: hidden; position: relative; overflow: hidden;
 	h1{ float:  left; @extend .clearfix; width: 100%; height: 450px; }
 	a{ font-size: 60px; color: #fff; position: relative; z-index: 2;
 		&:hover{ text-decoration: underline; }

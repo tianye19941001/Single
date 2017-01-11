@@ -20,28 +20,27 @@ module.exports = function(app) {
 
 	app.get('/',Index.index);
 	app.get('/article',Article.all);
-	app.get('/admin/article',Article.pagearticle);
-	app.post('/admin/article',Article.save);
-	app.get('/admin/list',Article.pagelist );
-	// 爬文章接口
-	app.post('/Crawler',Cr.cr);
-
 	app.get('/interesting',Interesting.all);
-	app.get('/admin/interesting',Interesting.pageinteresting);
-	app.post('/admin/interesting', upload.single('avatar'),Interesting.save);
-	
-
 	app.get('/register',User.pagereg);
 	app.get('/login',User.pagelogin);
 	app.get('/logout',User.logout);
 	app.post('/user/signup',User.signup);
 	app.post('/user/signin',User.signin);
-
 	// 留言板
 	app.get('/connect',Message.see);
-	app.post('/connect/message',Message.save);
-
+	app.post('/connect/message'，User.signinRequired,Message.save);
+	//关于我
 	app.get('/about',Other.about);
+	
+	app.get('/admin/article',User.signinRequired,User.adminRequired,Article.pagearticle);
+	app.post('/admin/article',User.signinRequired,User.adminRequired,User.adminRequired,Article.save);
+	app.get('/admin/list',User.signinRequired,User.adminRequired,Article.pagelist );
+	// 爬文章接口
+	app.post('/Crawler',User.signinRequired,User.adminRequired,Cr.cr);
+
+	app.get('/admin/interesting',User.signinRequired,User.adminRequired,Interesting.pageinteresting);
+	app.post('/admin/interesting',User.signinRequired,User.adminRequired,upload.single('avatar'),Interesting.save);
+	
 	app.get('*', Other.P404);
 
 

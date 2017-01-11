@@ -54,3 +54,17 @@ exports.pagereg = function(req,res){
 		title:'注册页面'
 	})
 }
+exports.signinRequired = function(req,res,next){
+	var user = req.session.user
+	if (!user) {
+		return res.redirect('/login')
+	}
+	next()
+}
+exports.adminRequired = function(req,res,next){
+	var user = req.session.user
+	if (user.role<=10) {
+		return res.redirect('/')
+	}
+	next()
+}
