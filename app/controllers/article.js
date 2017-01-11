@@ -35,7 +35,7 @@ exports.all = function(req,res){
 		for (var i = 1,Anum = []; i <= allnum; i++) {
 			Anum.push(i);
 		}
-		Article.find({}).sort({_id: -1}).limit(num*number).skip((num-1)*number).exec(function(err,articles){
+		Article.find({}).sort({_id: -1}).limit(number).skip((num-1)*number).exec(function(err,articles){
 			res.render('article',{
 				articles:articles,
 				numbers:Anum,
