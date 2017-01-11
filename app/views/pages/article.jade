@@ -16,6 +16,9 @@ block content
 	.pagelist
 		.pagelistIN
 			a(href='/article?number=#{now-1}').pre 上一页
-				each item in numbers
-					a(href='article?number=#{item}').btn #{item}
+				for item in numbers
+					if item == now
+						a(href='article?number=#{item}').btn.on #{item}
+					else
+						a(href='article?number=#{item}').btn #{item}
 			a(href='/article?number=#{now+1}').next 下一页
