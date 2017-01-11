@@ -28,7 +28,7 @@ module.exports = function(app) {
 	app.post('/user/signin',User.signin);
 	// 留言板
 	app.get('/connect',Message.see);
-	app.post('/connect/message'，User.signinRequired,Message.save);
+	app.post('/connect/message',User.signinRequired,Message.save);
 	//关于我
 	app.get('/about',Other.about);
 	
