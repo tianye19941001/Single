@@ -12,7 +12,7 @@ exports.signup = function(req,res) {
 			var user = new User(_user);
 			user.save(function(err,user){
 				if (err) console.log(err);
-				res.redirect('/');
+				res.redirect('/signin');
 			});
 		}
 		
