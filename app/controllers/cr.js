@@ -27,7 +27,7 @@ function findIwant(html){
 	// 	download(src, dir, Math.floor(Math.random()*100000) + src.substr(-4,4));
 	// })
 
-	var title = $('.postTitle2').html();
+	var title = $('.postTitle2').text();
 	var all = $('.postBody').text();
 	var summary = all.substring(0,300)+'......';
 	var data = {title:title,summary:summary};
