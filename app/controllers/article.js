@@ -29,7 +29,7 @@ exports.all = function(req,res){
 		num = req.query.number;
 	}
 	Article.count({},function(err,count){
-		var allnum = Math.round(count/4);
+		var allnum = Math.ceil(count/4);
 		if (num == 0) num = 1;
 		if (num > allnum) num = allnum;
 		for (var i = 1,Anum = []; i <= allnum; i++) {
