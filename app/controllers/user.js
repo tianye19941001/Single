@@ -46,12 +46,12 @@ exports.logout = function(req,res){
 }
 exports.pagelogin = function(req,res){
 	res.render('login',{
-		title:'登录页面'
+		title:'小楼兰的奔跑-登录页面'
 	})
 }
 exports.pagereg = function(req,res){
 	res.render('register',{
-		title:'注册页面'
+		title:'小楼兰的奔跑-注册页面'
 	})
 }
 exports.signinRequired = function(req,res,next){

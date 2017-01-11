@@ -11,6 +11,7 @@ exports.save = function(req,res) {
 exports.see = function(req,res){
 	Message.find({}).populate("name","name").exec(function(err,messages){
 		res.render('connect',{
+			title:"小楼兰的奔跑-留言"
 			messages:messages
 		})
 	})
