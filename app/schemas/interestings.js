@@ -17,6 +17,8 @@ var InterestingsSchema = new mongoose.Schema({
 		}
 	}
 })
+
+
 InterestingsSchema.pre('save',function(next) {
 	if(this.isNew){
 		this.meta.creatAt = this.meta.updateAt = Date.now()
