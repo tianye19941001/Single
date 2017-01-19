@@ -33,7 +33,7 @@ exports.signin = function(req,res) {
 						req.session.user = user
 						return res.redirect('/')
 					}else{
-						return res.redirect('/signin')
+						return res.redirect('/login')
 						console.log('password is not matched')
 				}
 			})
