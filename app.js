@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var app = express();
 var dbUrl = 'mongodb://localhost/tianye2'
+// var dbUrl = 'mongodb://tianye:19941001@localhost/tianye2';
 mongoose.connect(dbUrl)
 
 app.set('views','./app/views/pages')
