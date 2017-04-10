@@ -36,3 +36,6 @@ exports.save = function(req,res){
 	})
 	console.log(file);
 }
+exports.gameLight = function(req,res){
+	res.render('game_light');
+}

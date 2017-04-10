@@ -32,6 +32,9 @@ module.exports = function(app) {
 	//关于我
 	app.get('/about',Other.about);
 	
+	// 小玩意
+	app.get('/interesting/light',Interesting.gameLight);
+
 	app.get('/admin/article',User.signinRequired,User.adminRequired,Article.pagearticle);
 	app.post('/admin/article',User.signinRequired,User.adminRequired,User.adminRequired,Article.save);
 	app.get('/admin/list',User.signinRequired,User.adminRequired,Article.pagelist );
