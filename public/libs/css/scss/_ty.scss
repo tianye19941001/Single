@@ -100,6 +100,9 @@ header{ position: fixed; top: 0; left: 0; width: 100%; height:70px; background: 
 }
 .ty_about{ padding: 30px 15px; background: #fff; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; 
 	h1{ text-align: center; font-size: 24px; }
+	p{ font-size: 18px; text-indent: 36px; line-height: 48px; padding: 0 30px; margin-bottom: 24px;
+		a{ text-decoration: underline; color: blue; margin-left: 24px; }
+	}
 }
 .ty_times{ position: fixed; right: 0; top: 100px; width: 400px; height: 150px; z-index: 3; }
 
