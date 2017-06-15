@@ -44,9 +44,10 @@ module.exports = function(app) {
 	app.get('/admin/interesting',User.signinRequired,User.adminRequired,Interesting.pageinteresting);
 	app.post('/admin/interesting',User.signinRequired,User.adminRequired,upload.single('avatar'),Interesting.save);
 	
+	// 调戏敏姐专用
+	app.get('/about',Other.min);
+	
 	app.get('*', Other.P404);
-
-
 
 
 
