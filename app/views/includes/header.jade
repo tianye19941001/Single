@@ -12,7 +12,7 @@ header
 			a(href="/connect") 联系
 .ty_logo
 	h1 
-		img(src="/libs/images/bannar.jpg")
+		//- img(src="/libs/images/bannar.jpg")
 		a(href="/") 小楼兰的奔跑
 .ty_tools
 	if user
@@ -22,5 +22,6 @@ header
 	else
 		a(href='/register') 注册
 		a(href='/login') 登陆
+canvas(id="EarthCanvas",class="EarthCanvas")
 .ty_times
 	canvas(id="canvas_time",class="canvas_time")
